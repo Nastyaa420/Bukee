@@ -5,3 +5,28 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.page-main {
+    background-image: url(../img/bg-main.png);
+    background-repeat: no-repeat;  
+    background-size: cover;
+}
+
+header {
+    &__logo {
+        display: block;
+        width: 137px;
+        height: 28px;
+        background-image: url(../img/logo.svg);
+    }
+}
