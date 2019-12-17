@@ -35,19 +35,20 @@ body {
     background-repeat: no-repeat;  
     background-size: cover;
     color: $light-color;
-    padding-bottom: 163px;
+    padding-bottom: 158px;
 }
 .page {
     margin-top: 161px;
     padding-bottom: 160px;
     &_gray {
         background-color: $bg-light-color;
-        padding-top: 50px;
+        margin-top: 0;
     }
     &__title {
         font-size: 48px;
         text-align: center;
         margin-bottom: 25px;
+        padding-top: 160px;
         letter-spacing: 2px;
 
     }
@@ -66,8 +67,8 @@ body {
     align-items: center;
     max-width: 1170px;
     margin: 0 auto;
-    padding-top: 38px;
-    padding-bottom: 166px;
+    padding-top: 24px;
+    padding-bottom: 179px;
     font-family: 'Open Sans', serif;
     &__logo {
         display: block;
@@ -81,7 +82,7 @@ body {
         display: flex;
         justify-content: flex-end;
         &__item {
-            margin-left: 22px;
+            margin-left: 20px;
             padding-bottom: 5px;
             border-bottom: 3px solid transparent;
             transition: 0.3s;
@@ -95,37 +96,39 @@ body {
         &__link {
             color: $light-color;
             text-decoration: none;
-            letter-spacing: 0.5px;
+            letter-spacing: 1.2px;
         }
     }
 }
 
 .block-text {
-    flex-basis: calc(100% - 500px);
+    flex-basis: 50%;
+    margin-right: 85px;
     &__name{
         font-family: 'Open Sans', serif;  
         font-size: 18px;
         letter-spacing: 0.85px;
-        margin-bottom: 38px;
+        margin-bottom: 43px;
         margin-left: 4px;
         margin-top: 1px;
     }
     &__name_top {
         margin-top: 16px;
         margin-left: 0;
-        margin-bottom: 19px;
+        margin-bottom: 31px;
     }
     &__title {
         font-size: 48px;
         font-weight: 700;
-        letter-spacing: 1.8px;
+        letter-spacing: 1.6px;
         margin-bottom: 40px;
         span {
             display: block;
             color: $accent-color;
             font-size: 18px;
-            margin-top: 9px;
-            letter-spacing: 0.9px;
+            margin-top:23px;
+            letter-spacing: 0.7px;
+            font-weight: 400;
         }
     }
     &__description {
@@ -140,14 +143,15 @@ body {
         background-color: $accent-color;
         color: white;
         text-decoration: none;
-        max-width: 250px;
+        max-width: 238px;
+        height: 22px;
         border-radius: 3px;
         text-align: center;
         font-size: 18px;
-        margin-top: 48px;
+        margin-top: 44px;
         padding: 14px 0;
         letter-spacing: 0.7px;
-        margin-bottom: 19px;
+        margin-bottom: 14px;
     }
     &__small {
         font-style: italic;
@@ -159,12 +163,40 @@ body {
     justify-content: space-between;
         &-demo{
             display: block;
+            position: relative;
             width: 447px;
             height: 643px;
             background-image: url(../img/book.svg);
             background-repeat: no-repeat;
             flex-basis: 447px;
             justify-content: flex-start;
+            &__title{
+                font-size: 36px;
+                text-transform: uppercase;
+                position: absolute;
+                left: 131px;
+                top: 118px;
+                letter-spacing: 1px;
+                span{
+                    font-family: 'Open Sans', serif;
+                    font-size: 14px;
+                    color: $accent-color;
+                    display: block;
+                    text-transform: initial;
+                    margin-top: 10px;
+                    letter-spacing: 0.7px;
+                    font-weight: 300;
+                }
+            }
+            &__author {
+                font-family: 'Open Sans', serif;
+                font-size: 14px;
+                color: $accent-color;  
+                position: absolute;
+                bottom: 58px;
+                left: 85px;
+                letter-spacing: 0.7px;
+            }
         }
     }
 .block-author {
@@ -186,7 +218,7 @@ body {
 .block-counter {
     display: flex;
     justify-content: space-around;
-    margin-top: 152px;
+    margin-top: 213px;
     p {
         font-family: 'Open Sans', serif; 
         text-align: center;
