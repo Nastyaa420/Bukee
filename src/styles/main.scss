@@ -8,14 +8,21 @@
 
 $light-color: white;
 $accent-color: #65e496;
+$bg-light-color: #f5f6fa;
+$bg-dark-color: #44444f;
+
 h1, h2, h3, h4, p {
     margin: 0;
     padding: 0;
 }
+h3 {
+    font-size: 24px;
+}
 
 body {
     font-family: 'Roboto Slab', serif;
-
+    font-size: 15px;
+    line-height: 24px;
 }
 
 .wrap {
@@ -28,8 +35,30 @@ body {
     background-repeat: no-repeat;  
     background-size: cover;
     color: $light-color;
-    padding-bottom: 50px;
+    padding-bottom: 163px;
 }
+.page {
+    margin-top: 161px;
+    padding-bottom: 160px;
+    &_gray {
+        background-color: $bg-light-color;
+        padding-top: 50px;
+    }
+    &__title {
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+
+    }
+    &__subtitle {
+        color: $accent-color;
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 0.9px;
+    }
+}
+
 
 .header {
     display: flex;
@@ -76,8 +105,15 @@ body {
     &__name{
         font-family: 'Open Sans', serif;  
         font-size: 18px;
-        letter-spacing: 0.7px;
-        margin-bottom: 30px;
+        letter-spacing: 0.85px;
+        margin-bottom: 38px;
+        margin-left: 4px;
+        margin-top: 1px;
+    }
+    &__name_top {
+        margin-top: 16px;
+        margin-left: 0;
+        margin-bottom: 19px;
     }
     &__title {
         font-size: 48px;
@@ -89,7 +125,7 @@ body {
             color: $accent-color;
             font-size: 18px;
             margin-top: 9px;
-            letter-spacing: 1px;
+            letter-spacing: 0.9px;
         }
     }
     &__description {
@@ -131,3 +167,124 @@ body {
             justify-content: flex-start;
         }
     }
+.block-author {
+    display: flex;
+    justify-content: space-between;
+}
+.block-ava {
+    position: relative;
+    &__svg {
+        position: absolute;
+        right: 0;
+        z-index: -1;
+    }
+    &__img {
+        margin-top: 45px;
+        margin-right: 46px;
+    }
+}
+.block-counter {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 152px;
+    p {
+        font-family: 'Open Sans', serif; 
+        text-align: center;
+        font-size: 18px;
+        span {
+            font-family: 'Roboto Slab', serif;
+            display: block;
+            font-weight: 100;
+            font-size: 80px;
+            color: $accent-color;
+            margin-bottom: 45px;
+        }
+    }
+}
+
+.block-about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 82px;
+    h3 {
+        margin-bottom: 20px;
+        letter-spacing: 1.2px;
+    }
+    &-text {
+        flex-basis: 41%;
+        &__desk {
+        font-family: 'Open Sans', serif;
+        letter-spacing: 0.6px;
+        }
+    }
+    &-table {
+        flex-basis: 49%;
+        &__list {
+            margin: 25px 0 0 0;
+            padding: 0;
+            counter-reset: list;
+            column-count: 2;
+            &>li {
+                position: relative;
+                padding-left: 36px;
+                counter-increment: list;
+                list-style-type: none;
+                margin-bottom: 8px;
+                letter-spacing: 0.7px;
+                &::before {
+                    content: counter(list) ". ";
+                }
+                &::after {
+                    content: "+";
+                    font-family: 'Open Sans', serif;
+                    font-size: 15px;
+                    line-height: 22px;
+                    position: absolute;
+                    left: 0;
+                    top: 1px;
+                    background-color: #5fc9b3;
+                    color: $light-color;
+                    padding: 0px 7px;
+                }
+            }
+        }
+        &__btn {
+            background-color: $accent-color;
+            border: none;
+            color: $light-color;
+            text-decoration: none;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 28px;
+            padding: 14px 45px;
+            letter-spacing: 0.7px;
+            margin-bottom: 19px;
+        }
+    }
+    &-social {
+        display: flex;
+        align-items: center;
+        margin-top: 31px;
+        &__title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.9px;
+        }
+        &__list {
+            list-style-type: none;
+            padding-left: 23px;
+            &>li {
+                display: inline-block;
+                font-size: 18px;
+                vertical-align: middle;
+                margin-right: 12px;
+                &>a {
+                    color: $accent-color;
+                     
+                }
+            }
+        }
+    }
+}
