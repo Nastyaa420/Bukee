@@ -29,6 +29,9 @@ body {
 .wrap {
     max-width: 1170px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    ;
 }
 
 .page-main {
@@ -42,6 +45,7 @@ body {
 .page {
     padding-top: 161px;
     padding-bottom: 160px;
+    position: relative;
     &_gray {
         background-color: $bg-light-color;
     }
@@ -50,6 +54,12 @@ body {
         text-align: center;
         margin-bottom: 26px;
         letter-spacing: 2px;
+        &-gray{
+            margin-top: 5px;
+        }
+        &-cont {
+            margin-top: 2px;
+        }
     }
     &__subtitle {
         color: #65e496;
@@ -57,6 +67,18 @@ body {
         font-size: 18px;
         letter-spacing: 0.77px;
         padding-left: 0px;
+        &-cont {
+            margin-top: 2px;
+        }
+
+    }
+    &__sub {
+        color: #65e496;
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 0.77px;
+        padding-left: 0px;
+        margin-bottom: 84px;
     }
     &__btn{
         background: linear-gradient(to bottom right, #65e49c, #65e4b0);
@@ -73,6 +95,19 @@ body {
         padding: 14px 0px;
         letter-spacing: 0.7px;
         box-shadow: 0 -2px #adedbb inset;
+        &-blog {
+            max-width: 265px;
+            margin-bottom: -2px;
+        }
+    }
+    &__svg {
+        position: absolute;
+        top: -2px;
+        width: 100%;
+        z-index: -1;
+    }
+    &_emma {
+        margin-bottom: -30px;
     }
 }
 .header {
@@ -81,9 +116,8 @@ body {
     align-items: center;
     max-width: 1170px;
     margin: 0 auto;
-    padding-top: 24px;
-    padding-bottom: 179px;
     font-family: 'Open Sans', serif;
+    padding: 24px 15px 179px 15px;
     &__logo {
         display: block;
         width: 137px;
@@ -95,9 +129,9 @@ body {
         list-style-type: none;
         display: flex;
         justify-content: flex-end;
+        padding-top: 4px;
         &__item {
             margin-left: 20px;
-            padding-bottom: 5px;
             border-bottom: 3px solid transparent;
             transition: 0.3s;
             &:hover {
@@ -123,33 +157,35 @@ body {
         font-size: 18px;
         letter-spacing: 0.85px;
         margin-bottom: 43px;
-        margin-left: 4px;
         margin-top: 1px;
     }
     &__name_top {
         margin-top: 16px;
         margin-left: 0;
-        margin-bottom: 31px;
+        margin-bottom: 33px;
     }
     &__title {
         font-size: 48px;
         font-weight: 700;
-        letter-spacing: 1.6px;
+        letter-spacing: 1.8px;
         margin-bottom: 40px;
         span {
             display: block;
             color: $accent-color;
             font-size: 18px;
-            margin-top:23px;
-            letter-spacing: 0.7px;
+            margin-top:25px;
+            letter-spacing: 1px;
             font-weight: 400;
+        }
+        &-emma {
+            letter-spacing: 1.5px;
         }
     }
     &__description {
         font-family: 'Open Sans', serif;
         font-size: 15px;
         line-height: 24px;
-        margin-bottom: 24px;
+        margin-bottom: 27px;
         letter-spacing: 0.75px;
     }
     &__btn {
@@ -164,18 +200,28 @@ body {
         margin-top: 44px;
         padding: 11px 0 15px 0;
         letter-spacing: 0.7px;
-        margin-bottom: 14px;
+        margin-bottom: 16px;
         box-shadow: 0 -2px #adedbb inset;
+        &-bio {
+            margin-top: 47px;
+            max-width: 238px;
+        }
+        
     }
     &__btn--main {
         box-shadow: 0 -2px #59ba88 inset;
+        margin-top: 47px;
     }
     &__small {
         font-style: italic;
-        letter-spacing: 0.2px;
+        letter-spacing: 0.3px;
+        font-weight: 100;
+        font-size: 12px;
+        margin-left: -3px;
     }
     &-item{
         margin-bottom: 55px;
+        margin-left: -3px;
         &__date{
             font-size: 15px;
             font-family: 'Open Sans', serif;
@@ -190,7 +236,8 @@ body {
         &__desc{
             font-size: 15px;
             font-family: 'Open Sans', serif;
-            letter-spacing: 0.75px;
+            letter-spacing: 0.8px;
+            padding-top: 4px;
         }
         &__btn {
             display: block;
@@ -241,7 +288,7 @@ body {
                     display: block;
                     text-transform: initial;
                     margin-top: 10px;
-                    letter-spacing: 1px;
+                    letter-spacing: 0.9px;
                     font-weight: 300;
                 }
             }
@@ -250,7 +297,7 @@ body {
                 font-size: 14px;
                 color: $accent-color;  
                 position: absolute;
-                bottom: 58px;
+                bottom: 56px;
                 left: 85px;
                 letter-spacing: 0.7px;
             }
@@ -259,6 +306,7 @@ body {
 .block-author {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0px;
 }
 
 .block-ava {
@@ -284,8 +332,9 @@ body {
 }
 .block-counter {
     display: flex;
-    justify-content: space-around;
-    margin-top: 213px;
+    justify-content: space-between;
+    margin: 213px auto 0 auto;
+    max-width: 85%;
     p {
         font-family: 'Open Sans', serif; 
         text-align: center;
@@ -314,7 +363,9 @@ body {
         flex-basis: 41%;
         &__desk {
         font-family: 'Open Sans', serif;
-        letter-spacing: 0.6px;
+        letter-spacing: 0.8px;
+        margin-top: 24px;
+        line-height: 24px;
         }
     }
     &-table {
@@ -324,6 +375,7 @@ body {
             padding: 0;
             counter-reset: list;
             column-count: 2;
+            line-height: 25px;
             &>li {
                 position: relative;
                 padding-left: 36px;
@@ -441,7 +493,8 @@ body {
         }
         p{
             letter-spacing: 1px;
-            margin-bottom: 15px;
+            margin-bottom: 17px;
+            line-height: 25px;
         }
         a {
             text-decoration: none;
@@ -456,10 +509,11 @@ body {
 .block-blog {
     display: flex;
     justify-content: space-between;
-    margin-top: 86px;
+    margin-top: 0;
+    padding-top: 1px;
     h4 {
-        font-size: 18px;
-        letter-spacing: 1.3px;
+        font-size: 17px;
+        letter-spacing: 0.9px;
     }
     &-img{
         width: 360px;
@@ -496,6 +550,7 @@ body {
         margin-bottom: 96px;
         letter-spacing: 0.7px;
         width: 369px;
+        line-height: 25px;
     }
     & + page__btn {
         display: block;
@@ -509,14 +564,16 @@ body {
 .block-letter {
     display: flex;
     justify-content: space-between;
+    margin-bottom: -14px;
+    margin-top: 3px;
     &-item {
         flex-basis: 49%;
     }
     &__title{
         font-size: 48px;
-        margin-top: 8px;
-        margin-bottom: 23px;
-        letter-spacing: 1.9px;
+        margin-top: 1px;
+        margin-bottom: 27px;
+        letter-spacing: 1.8px;
     }
     &__text{
         font-size: 15px;
@@ -532,6 +589,7 @@ body {
         color: $gray-color;
         padding: 15px 15px;
         letter-spacing: 0.6px;
+        margin-top: -5px;
         &:focus {
             outline: none;
         }
@@ -562,15 +620,21 @@ body {
 .footer {
     background-color: $bg-dark-color;
     color: $gray-color;
+    padding-bottom: 150px;
 }
 .block-footer{
     display: flex;
     justify-content: space-between;
     padding-top: 160px;
+    margin-top: 8px;
+    line-height: 25px;
+    font-size: 14px;
     &__copy{
-        flex-basis: 34%;
+        flex-basis: 33%;
         p{
-            letter-spacing: 1.2px;
+            letter-spacing: 0.4px;
+            line-height: 24px;
+            font-size: 15px;
         }
     }
     &__cr{
@@ -578,13 +642,18 @@ body {
     }
     &__info{
         flex-basis: 23%;
+        padding-top: 3px;
+        font-size: 14px;
+        line-height: 26px;
+
     }
     h2{
         text-transform: uppercase;
         padding-top: 7px;
         margin-right: 41px;
         letter-spacing: 0.8px;
-        margin-bottom: 22px;
+        margin-bottom: 17px;
+        letter-spacing: 1.3px;
     }
     &>div{
         justify-content: space-between;
@@ -593,41 +662,131 @@ body {
         display: block;
         width: 137px;
         height: 28px;
-        background-image: url(../img/logo.svg);
+        background-image: url(../img/footer-logo.svg);
         background-repeat: no-repeat;
         padding-top: 28px;
     }
     &__title{
-        font-size: 18px;
+        font-size: 17px;
         color: $accent-color;
     }
     &__list{
         list-style-type: none;
         padding-left: 0;
         line-height: 28px;
+        letter-spacing: 0.7px;
+        &-li {
+            letter-spacing: 0.6px;
+            margin-left: -2px;
+        }
     }
     
     &__right{
         margin-left: 29px;
-        line-height: 25px;
-        ul{
-            line-height: 25px;
-            letter-spacing: 0.4px;
-        }
     }
     &__social{
         display: flex;
         list-style-type: none;
         padding-left: 0;
         line-height: 28px;
-        margin-top: 12px;
+        margin-top: 13px;
+        margin-left: -2px;
+    }
 
         &>li{
             margin-right: 10px;
+            margin-top: -4px;
             &>a{
                 color: $accent-color;
                 letter-spacing: 2.5px;
             } 
+        }
+    }
+}
+.block-carousel {
+    text-align: center;
+    margin-bottom: 60px;
+    h3{
+        color: $accent-color;
+        margin-bottom: 4px;
+        letter-spacing: 1px;
+    }
+    &__desc{
+        color: $gray-color;
+        font-family: 'Open Sans', serif;
+        max-width: 760px;
+        margin: 0 auto;
+        line-height: 27px;
+        letter-spacing: 0.75px;
+    }
+    &__expert{
+        margin-bottom: 34px;
+        letter-spacing: 1px;
+    }
+    &-ava{
+        position: relative;
+        width: 152px;
+        height: 152px;
+        display: block;
+        margin: 0 auto 24px;
+        padding-top: 63px;
+    }
+    &-bq {
+        position: absolute;
+        display: block;
+        background-image: url(../img/bq.png);
+        background-repeat: no-repeat;
+        width: 48px;
+        height: 42px;
+        top: 60px;
+        right: -15px;
+    }
+    &-thumb {
+        display: block;
+        margin: 0 auto 0;
+        position: relative;
+        overflow: hidden;
+        width: 152px;
+        height: 152px;
+        border-radius: 100%;
+        img {
+            width: 152px;
+            height: 152px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+    }
+}
+.slick-dots {
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    &>li{
+        margin: 0 5px;
+        &>button{
+            text-indent: -9999px;
+            width: 8px;
+            height: 8px;
+            border: none;
+            background-color: $accent-color;
+            border-radius: 100%;
+            line-height: 0;
+            font-size: 0;
+            cursor: pointer;
+            padding: 5px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &>li.slick-active {
+        &>button {
+            width: 37px;
+            border-radius: 10px;
         }
     }
 }

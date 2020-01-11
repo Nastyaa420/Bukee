@@ -23,9 +23,11 @@
         <link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
         <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i|Roboto+Slab:100,400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Roboto+Slab:100,400,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/8af036d04a.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
     </head>
     <body>
         <div class="page-main">
@@ -72,10 +74,10 @@
                 <div class="block-author">
                     <div class="block-text">
                         <p class="block-text__name block-text__name_top">- Book Author</p>   
-                        <h2 class="block-text__title">Emma Anderson <span>A room without books is like a body without a soul</span></h2>
+                        <h2 class="block-text__title block-text__title-emma">Emma Anderson <span>A room without books is like a body without a soul</span></h2>
                         <p class="block-text__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                         <p class="block-text__description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut</p>
-                        <a href="" class="block-text__btn">Read full biography	</a> 
+                        <a href="" class="block-text__btn block-text__btn-bio">Read full biography	</a> 
                     </div>  
                     <div class="block-ava">
                         <svg class="block-ava__svg" width="435" height="558">
@@ -99,8 +101,8 @@
 
         <div class="page page_gray">
             <div class="wrap">
-                <h2 class="page__title">Book Contents </h2> 
-                <p class="page__subtitle">Let’s see what we have covered in the book </p>
+                <h2 class="page__title page__title-cont">Book Contents </h2> 
+                <p class="page__subtitle page__title-cont">Let’s see what we have covered in the book </p>
                 <div class="block-about">
                     <div class="block-about-text">
                         <h3>About the book</h3>
@@ -186,7 +188,47 @@
                 <a href="" class="page__btn">Browse all books</a>
             </div>
         </div>
-        <div class="page">
+        <div class="page page-carousel">
+            <div class="wrap">
+                <div class="block-carousel">
+                    <div>
+                        <div class="block-carousel-ava">
+                            <div class="block-carousel-thumb">
+                                <img src="../img/feedback.png" alt="">
+                            </div>
+                            <span class="block-carousel-bq"></span>
+                        </div>
+                        <h3>Kate Dennings</h3>
+                        <p class="block-carousel__desc block-carousel__expert">Calligraphy Expert</p>
+                        <p class="block-carousel__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                    </div>
+                    <div>
+                        <div class="block-carousel-ava">
+                            <div class="block-carousel-thumb">
+                                <img src="../img/feedback.png" alt="">
+                            </div>
+                            <span class="block-carousel-bq"></span>
+                        </div>
+                        <h3>Kate Dennings</h3>
+                        <p class="block-carousel__desc block-carousel__expert">Calligraphy Expert</p>
+                        <p class="block-carousel__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                    </div>
+                    <div>
+                        <div class="block-carousel-ava">
+                            <div class="block-carousel-thumb">
+                                <img src="../img/feedback.png" alt="">
+                            </div>
+                            <span class="block-carousel-bq"></span>
+                        </div>
+                        <h3>Kate Dennings</h3>
+                        <p class="block-carousel__desc block-carousel__expert">Calligraphy Expert</p>
+                        <p class="block-carousel__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p">
+                    </div>
+                </div>
+            </div>
+            <svg class="page__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1600 849" preserveAspectRatio="none" width="1600" height="849"><path d="M-1 0l802 61 799-61v789l-799 60-802-60V0z" fill="#44444f" fill-rule="evenodd"/></svg>
+        </div>
+        <div class="page page_emma">
             <div class="wrap">
                 <div class="block-author">
                     <div class="block-ava">
@@ -201,7 +243,7 @@
                     </div>
                     <div class="block-text block-text--width">
                         <p class="block-text__name block-text__name_top">- Emma Anderson</p>   
-                        <h2 class="block-text__title">Upcoming Events <span>Some upcoming events you might be interested in</span></h2>
+                        <h2 class="block-text__title block-text__title-up">Upcoming Events <span>Some upcoming events you might be interested in</span></h2>
                         <div class="block-text-item">
                             <p class="block-text-item__date">November 21, 2018</p>
                             <h4 class="block-text-item__title">Book signing - San francisco, CA</h4>
@@ -221,8 +263,8 @@
 
         <div class="page page_gray">
             <div class="wrap">
-                <h2 class="page__title">Latest from Blog</h2> 
-                <p class="page__subtitle">Some of the latest posts from my personal blog</p>
+                <h2 class="page__title page__title-gray">Latest from Blog</h2> 
+                <p class="page__sub">Some of the latest posts from my personal blog</p>
                 <div class="block-blog">
                     <div class="block-blog-item">
                         <div class="block-blog-img"><img src="../img/blog1.jpg" alt=""></div>
@@ -249,7 +291,7 @@
                         <p class="block-blog__desc">Lorem ipsum dolor sit amet, conse ctetur adipi scing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo</p>
                     </div>
                 </div>
-                <a href="" class="page__btn">Read more in the blog</a>
+                <a href="" class="page__btn page__btn-blog">Read more in the blog</a>
             </div> 
         </div>
         
@@ -291,9 +333,9 @@
                             Our Contacts
                         </h2>
                         <ul class="block-footer__list">
-                            <li>Amphitheatre Parkway, CA, 94043</li>
-                            <li>Call us on: +4455663322</li>
-                            <li>Email: support@bukee.mail</li>
+                            <li class="block-footer__list-li">Amphitheatre Parkway, CA, 94043</li>
+                            <li class="block-footer__list-li">Call us on: +4455663322</li>
+                            <li class="block-footer__list-li">Email: support@bukee.mail</li>
                         </ul>
                         <ul class="block-footer__social">
                             <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -308,5 +350,15 @@
             </div>
         </div>
     <script src="../js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $('.block-carousel').slick({
+        dots: true,
+        arrows: false,
+    });
+    });
+</script>
     </body>
 </html>
