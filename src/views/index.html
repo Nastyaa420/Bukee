@@ -50,7 +50,7 @@
 
             <div class="wrap">
                     <div class="block-book">
-                        <div class="block-book-demo block-book-demo--margin">
+                        <div class="block-book-demo">
                             <h2 class="block-book-demo__title">
                                 Good book
                                 <span>Don't judge a book by its cover</span>
@@ -130,7 +130,19 @@
                             <li>Consectetur adipisicing elit</li>
                             <li>Labore et dolore magna</li>
                         </ol>
-                        <button class="block-about-table__btn">More</button>
+                        <ol class="block-about-table__list block-about-table__list_next" id="nextContentsList" style="display: none;">
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                        </ol>
+                        <button id="nextContents" class="block-about-table__btn">More</button>
                     </div>
                 </div>
             </div> 
@@ -349,16 +361,20 @@
                 </div>
             </div>
         </div>
-    <script src="../js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-    $(document).ready(function(){
-    $('.block-carousel').slick({
-        dots: true,
-        arrows: false,
-    });
-    });
-</script>
+        <script src="../js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            $('.block-carousel').slick({
+                dots: true,
+                arrows: false,
+            });
+            });
+            $("#nextContents").click(function(){
+            $("#nextContentsList").fadeIn();
+            $("#nextContents").hide();
+            });
+        </script>
     </body>
 </html>
